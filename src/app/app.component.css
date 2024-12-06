@@ -1,0 +1,210 @@
+/* src/app/app.component.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+  }
+  
+  /* Remove side padding and margin from main container */
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* Logo styling */
+  .logo {
+    height: 60px;
+  }
+  
+  /* Header styling */
+  header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Hero section styling */
+  .hero {
+    background-color: #005691;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero .btn {
+    margin: 0.5rem;
+  }
+  
+  /* Features section styling */
+  .features {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .features h2 {
+    color: #005691;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .features p {
+    color: #333;
+  }
+  
+  /* Testimonials section styling */
+  .testimonials {
+    background-color: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonials p {
+    font-size: 1.125rem;
+    margin: 1rem;
+    font-style: italic;
+  }
+  
+  /* Adjust spacing for Bootstrap columns in smaller screens */
+  .col-md-4, .col-md-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+
+
+/* Course Section */
+.course-section {
+  padding: 20px 0;
+}
+
+.course-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.course-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+
+nav {
+  background-color: #007BFF;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Updated CSS for Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #1a73e8, #4285f4); /* Gradient background to match logo colors */
+  color: #ffffff; /* White text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header .logo {
+  height: 50px; /* Adjust logo size */
+  margin-right: 15px;
+}
+
+header .site-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* White color for site name */
+  margin-right: auto;
+}
+
+header nav {
+  display: flex; /* Ensure items are laid out horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+header nav a {
+  color: #ffffff; /* White color for navigation links */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transition for color and transform */
+}
+
+header nav a:hover {
+  color: #ffd700; /* Gold color on hover */
+  transform: scale(1.25); /* Slightly zoom in on hover */
+}
+
+header nav a.active {
+  color: #ffd700; /* Gold color for active link */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header nav a {
+    margin: 10px 0;
+  }
+}

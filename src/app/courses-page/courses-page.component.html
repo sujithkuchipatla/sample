@@ -1,0 +1,40 @@
+<div class="courses-page">
+    <!-- Filter & Search Section -->
+    <div class="filter-search">
+      <input 
+        type="text" 
+        placeholder="Search for courses..." 
+        [(ngModel)]="searchQuery"
+        class="search-bar"
+      />
+  
+      <select [(ngModel)]="selectedCategory" class="filter-dropdown">
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+  
+    <!-- Featured Categories -->
+    <div class="featured-categories">
+      <h2>Featured Categories</h2>
+      <div class="categories-list">
+        <div *ngFor="let category of categories" class="category-item">
+          {{ category }}
+        </div>
+      </div>
+    </div>
+  
+    <!-- Courses List/Grid -->
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of filteredCourses">
+        <h3>{{ course.title }}</h3>
+        <p><strong>Provider:</strong> {{ course.provider }}</p>
+        <p><strong>Level:</strong> {{ course.level }}</p>
+        <p><strong>Duration:</strong> {{ course.duration }}</p>
+        <p><strong>Rating:</strong> {{ course.rating }}⭐</p>
+        <p>{{ course.description }}</p>
+        <button class="cta-button">Enroll</button>
+      </div>
+    </div>
+  </div>
+  

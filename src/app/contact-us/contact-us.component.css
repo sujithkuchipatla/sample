@@ -1,0 +1,131 @@
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute items with space between */
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-out;
+}
+
+.contact-form {
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 600px;
+  animation: slideUp 1s ease-out;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4caf50;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.support-details,
+.social-links {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #1a73e8; /* Blue background */
+  color: white; /* White text */
+  padding: 20px 0; /* Padding for spacing */
+  width: 100%;
+  animation: fadeIn 2s ease-out;
+}
+
+.support-details p,
+.social-links a {
+  font-size: 1.1rem;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 5px 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white; /* White color for social links */
+  transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  color: #a1c4e7; /* Lighter blue on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

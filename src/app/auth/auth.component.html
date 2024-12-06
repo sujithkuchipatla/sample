@@ -1,0 +1,42 @@
+<div class="auth-container">
+  <div class="tabs">
+    <button (click)="showLogin()" [class.active]="isLogin">Login</button>
+    <button (click)="showSignup()" [class.active]="!isLogin">Signup</button>
+  </div>
+
+  <div *ngIf="isLogin">
+    <!-- Login Form -->
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <div>
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" [(ngModel)]="loginEmail" name="loginEmail" required />
+      </div>
+      <div>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" [(ngModel)]="loginPassword" name="loginPassword" required />
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+    <div *ngIf="loginMessage" class="message">{{ loginMessage }}</div>
+  </div>
+
+  <div *ngIf="!isLogin">
+    <!-- Signup Form -->
+    <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" [(ngModel)]="fullName" name="fullName" required />
+      </div>
+      <div>
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" [(ngModel)]="signupEmail" name="signupEmail" required />
+      </div>
+      <div>
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" [(ngModel)]="signupPassword" name="signupPassword" required />
+      </div>
+      <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+    </form>
+    <div *ngIf="signupMessage" class="message">{{ signupMessage }}</div>
+  </div>
+</div>

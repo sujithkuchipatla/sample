@@ -1,0 +1,46 @@
+<div class="profile-container">
+  <!-- Profile Header Section -->
+  <section class="profile-header">
+    <img src="https://th.bing.com/th/id/OIP.IuFv1NIBwkaWvKVIDp9V5QHaLH?w=636&h=954&rs=1&pid=ImgDetMain" alt="Profile Picture" class="profile-picture" />
+    <div class="profile-info">
+      <h2>{{ name }}</h2>
+      <p>Email: {{ email }}</p>
+      <button (click)="toggleEditMode()" class="edit-button">Edit</button>
+    </div>
+  </section>
+
+  <!-- Edit Profile Section -->
+  <section *ngIf="editMode" class="edit-profile-form">
+    <h3>Edit Profile</h3>
+    <form (ngSubmit)="saveChanges()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="formData.name" name="name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="formData.email" name="email" />
+
+      <button type="submit" class="save-button">Save</button>
+      <button type="button" (click)="cancelEdit()" class="cancel-button">Cancel</button>
+    </form>
+  </section>
+
+  <!-- Skills & Learning Path Section -->
+  <section class="skills-learning-path">
+    <h3>Skills & Learning Path</h3>
+    <ul>
+      <li *ngFor="let skill of skills">{{ skill }}</li>
+    </ul>
+  </section>
+
+  <!-- Activity & Progress Tracker Section -->
+  <section class="activity-progress">
+    <h3>Activity & Progress Tracker</h3>
+    <div class="progress-tracker">
+      <div class="course" *ngFor="let course of completedCourses">
+        <h4>{{ course.name }}</h4>
+        <p>{{ course.description }}</p>
+        <span class="badge">{{ course.badge }}</span>
+      </div>
+    </div>
+  </section>
+</div>

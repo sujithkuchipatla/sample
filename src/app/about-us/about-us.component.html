@@ -1,0 +1,16 @@
+<div class="about-us-container">
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>{{ companyMission }}</p>
+    </section>
+  
+    <section class="team">
+      <h2>Our Team</h2>
+      <div class="team-profile" *ngFor="let teamMember of teamProfiles">
+        <img [src]="teamMember.imageUrl" alt="{{ teamMember.name }}" class="team-image">
+        <h3>{{ teamMember.name }}</h3>
+        <p>{{ teamMember.role }}</p>
+      </div>
+    </section>
+  </div>
+  

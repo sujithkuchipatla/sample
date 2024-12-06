@@ -1,0 +1,129 @@
+/* Centered Circular Container */
+.auth-container {
+  width: 450px;
+  height: 450px; /* Set height and width to make it circular */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 50%; /* Make the container circular */
+  background-color: #fff;
+   
+ 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Effect on Circular Container */
+.auth-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Tabs for Login and Signup */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.tabs button {
+  padding: 5px;
+  margin: 0 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.tabs button.active {
+  font-weight: bold;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.tabs button:hover {
+  color: #0056b3;
+}
+
+/* Form Fields */
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Message Styles */
+.message {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+  width: 80%;
+}
+
+.message.success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.message.error {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Submit Button with Hover Animation */
+button.submit-btn {
+  width: 80%;
+  padding: 8px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button.submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}

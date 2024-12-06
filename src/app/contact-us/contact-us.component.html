@@ -1,0 +1,47 @@
+<div class="contact-us-container">
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form (ngSubmit)="submitForm()" #form="ngForm">
+      
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="contactForm.name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="contactForm.email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" [(ngModel)]="contactForm.subject" name="subject" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" [(ngModel)]="contactForm.message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" [disabled]="!form.valid">
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <section class="support-details">
+    <h3>Support Details</h3>
+    <p>Email: <a href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a></p>
+    <p>Phone: <a href="tel:{{ contactInfo.phone }}">{{ contactInfo.phone }}</a></p>
+    <p>Address: {{ contactInfo.address }}</p>
+  </section>
+
+  <section class="social-links">
+    <h3>Follow Us</h3>
+    <ul>
+      <li><a href="{{ socialLinks.facebook }}" target="_blank">Facebook</a></li>
+      <li><a href="{{ socialLinks.twitter }}" target="_blank">Twitter</a></li>
+      <li><a href="{{ socialLinks.linkedin }}" target="_blank">LinkedIn</a></li>
+    </ul>
+  </section>
+</div>

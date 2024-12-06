@@ -1,0 +1,106 @@
+<!-- Hero Section -->
+<section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center" style="height: 80vh;">
+    <h1>Bridge the Gap to Your Dream Job</h1>
+    <p>Learn, Apply, and Store Your Credentials All in One Place</p>
+    <div class="mt-4">
+      <button class="btn btn-warning btn-lg mx-2">Explore Courses</button>
+      <button class="btn btn-warning btn-lg mx-2">Find Jobs</button>
+      <button class="btn btn-warning btn-lg mx-2">Store Credentials</button>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="features py-5 bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Learn Industry Skills</h2>
+          <p>Gain access to a wide range of courses to boost your career.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Job Opportunities</h2>
+          <p>Find and apply to jobs that match your new skills.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Store Credentials</h2>
+          <p>Keep your certificates safe and easily shareable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="courses py-5 courses-bg">
+  <div class="container">
+    <h2 class="courses-title">Our Top  Courses</h2>
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of courses">
+        <img [src]="course.image" [alt]="course.name" class="course-image" />
+        <h3>{{ course.name }}</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ Section -->
+    <section class="faq-section"> 
+      <div class="faq-title">Frequently Asked Questions</div> 
+      <div class="faq-item" *ngFor="let faq of faqs"> 
+        <div class="faq-question" (click)="toggleAnswer(faq)"> 
+          {{ faq.question }} <span>&#9660;</span> 
+        </div> 
+        <div class="faq-answer" *ngIf="faq.showAnswer">
+           {{ faq.answer }} 
+          </div>
+        </div> 
+      </section>
+
+
+      <!-- Featured Companies Section -->
+    <section class="featured-companies">
+      <h2>Featured Companies</h2>
+      <div class="company-logos">
+        <img src="https://nrinews24x7.com/wp-content/uploads/2023/10/TCS_NRINEWS24x7_20231006_001.jpg" alt="Company 1">
+        <img src="https://th.bing.com/th/id/R.c3ac08076933e815ef39557f89b47f9b?rik=YNSsRadQZQdQQQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-mPh7lr-L5kw%2fURx8FtZsRYI%2fAAAAAAAAAU8%2f1Rl4GwVdyhM%2fs1600%2fmicrosoft-logo%2b(1).jpg&ehk=r%2bxBCHuV9agjuFR%2b2LkIJJT0rYEqC%2fUFrlQHeoKN7Uk%3d&risl=&pid=ImgRaw&r=0" alt="Company 2">
+        <img src="https://th.bing.com/th/id/OIP.pW0TOZyl_OZMIuo5HjUsyQHaIf?rs=1&pid=ImgDetMain" alt="Company 3">
+        <img src="https://th.bing.com/th/id/OIP.Bs2PlI-wmfFiYzgWNRO0pgHaDO?rs=1&pid=ImgDetMain" alt="Company 4">
+      </div>
+    </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="testimonials py-5 bg-dark text-white text-center">
+    <h2>What Our Users Say</h2>
+    <p>"Skill Bridge helped me land my dream job!"</p>
+    <p>"The courses are top-notch and highly practical."</p>
+  </section>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">Help</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Your Privacy Choices</a>
+          <a href="#">Notice to CA Residents</a>
+        </div>
+        <div class="social-media">
+          <a href="#"><img src="https://th.bing.com/th/id/OIP.enG2QUteotudVRb6SlpX8wHaHZ?rs=1&pid=ImgDetMain" alt="Instagram"></a>
+          <a href="#"><img src="https://www.freeiconspng.com/uploads/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube"></a>
+          <a href="#"><img src="https://th.bing.com/th/id/OIP.V5RoSjcG3SmfjaGnf8MyFwHaHa?rs=1&pid=ImgDetMain" alt="Pinterest"></a>
+          <a href="#"><img src="https://logospng.org/download/tiktok/logo-tiktok-icone-2048.png" alt="TikTok"></a>
+        </div>
+        <div class="language-selector">
+          <select>
+            <option value="english">English</option>
+            <!-- Add more languages as needed -->
+          </select>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Skill Bridge, Inc. 2024</p>
+      </div>
+    </footer>
+
+  
